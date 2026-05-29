@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { formatXml, validateXml } from '../../utils/formatXml'
+import { formatXml } from '../../utils/formatXml'
 import CopyButton from '../../components/CopyButton'
 
 const INDENT_OPTIONS = [

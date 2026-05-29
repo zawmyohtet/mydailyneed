@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { tools, categories } from '../tools/registry'
+import { tools } from '../tools/registry'
 
 export default function Sidebar({ isOpen, onClose }) {
   const location = useLocation()

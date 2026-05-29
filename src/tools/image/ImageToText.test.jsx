@@ -18,7 +18,7 @@ vi.mock('../../components/FileDropZone', () => ({
 
 vi.mock('../../utils/ocr', () => ({
   extractTextFromImage: vi.fn(),
-  validateImageFile: vi.fn((file) => ({ valid: true, error: null })),
+  validateImageFile: vi.fn(() => ({ valid: true, error: null })),
 }))
 
 describe('ImageToText', () => {
@@ -50,9 +50,7 @@ describe('ImageToText', () => {
     render(<ImageToText />)
     
     const fileInput = screen.getByTestId('file-input')
-    const file = new File(['test'], 'test.png', { type: 'image/png' })
-    
-    fireEvent.change(fileInput, { target: { files: [file] } })
+    fireEvent.change(fileInput, { target: { files: [new File(['test'], 'test.png', { type: 'image/png' })] } })
 
     const processButton = screen.getByRole('button', { name: /Extract Text/i })
     fireEvent.click(processButton)
@@ -68,9 +66,7 @@ describe('ImageToText', () => {
     render(<ImageToText />)
     
     const fileInput = screen.getByTestId('file-input')
-    const file = new File(['test'], 'test.png', { type: 'image/png' })
-    
-    fireEvent.change(fileInput, { target: { files: [file] } })
+    fireEvent.change(fileInput, { target: { files: [new File(['test'], 'test.png', { type: 'image/png' })] } })
 
     const processButton = screen.getByRole('button', { name: /Extract Text/i })
     fireEvent.click(processButton)
@@ -86,9 +82,7 @@ describe('ImageToText', () => {
     render(<ImageToText />)
     
     const fileInput = screen.getByTestId('file-input')
-    const file = new File(['test'], 'test.png', { type: 'image/png' })
-    
-    fireEvent.change(fileInput, { target: { files: [file] } })
+    fireEvent.change(fileInput, { target: { files: [new File(['test'], 'test.png', { type: 'image/png' })] } })
 
     const processButton = screen.getByRole('button', { name: /Extract Text/i })
     fireEvent.click(processButton)
@@ -108,9 +102,7 @@ describe('ImageToText', () => {
     render(<ImageToText />)
     
     const fileInput = screen.getByTestId('file-input')
-    const file = new File(['test'], 'test.png', { type: 'image/png' })
-    
-    fireEvent.change(fileInput, { target: { files: [file] } })
+    fireEvent.change(fileInput, { target: { files: [new File(['test'], 'test.png', { type: 'image/png' })] } })
 
     const processButton = screen.getByRole('button', { name: /Extract Text/i })
     fireEvent.click(processButton)

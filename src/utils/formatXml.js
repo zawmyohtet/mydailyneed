@@ -94,7 +94,6 @@ export function validateXml(input) {
 }
 
 function prettyPrint(node, indent, level = 0) {
-  const indentStr = ' '.repeat(indent * level)
   let result = ''
   
   if (node.nodeType === Node.DOCUMENT_NODE) {

@@ -79,7 +79,7 @@ describe('useLocalStorage', () => {
     window.localStorage.getItem
       .mockReturnValueOnce(null)
       .mockReturnValueOnce(JSON.stringify('updated-value'))
-    const { result } = renderHook(() => useLocalStorage('shared-key', 'default'))
+    renderHook(() => useLocalStorage('shared-key', 'default'))
     
     window.dispatchEvent(new StorageEvent('storage', {
       key: 'shared-key',

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import ToolLayout from '../../components/ToolLayout'
-import CopyButton from '../../components/CopyButton'
 import { countStats } from '../../utils/textTransforms'
 
 export default function WordCounter() {

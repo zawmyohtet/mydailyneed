@@ -3,7 +3,6 @@ import { lazy, Suspense, useState } from 'react'
 
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
-import ToolLayout from './components/ToolLayout'
 import ToolSearch from './components/ToolSearch'
 import KeyboardShortcutsModal from './components/KeyboardShortcutsModal'
 import { tools } from './tools/registry'
@@ -47,7 +46,7 @@ function Loading() {
 }
 
 function App() {
-  const [theme, setTheme] = useLocalStorage('theme', 'light')
+  const [theme] = useLocalStorage('theme', 'light')
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [shortcutsOpen, setShortcutsOpen] = useState(false)

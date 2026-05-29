@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { formatJson, validateJson } from '../../utils/formatJson'
+import { formatJson } from '../../utils/formatJson'
 import CopyButton from '../../components/CopyButton'
 
 const INDENT_OPTIONS = [

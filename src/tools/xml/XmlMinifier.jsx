@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { minifyXml, validateXml } from '../../utils/formatXml'
+import { minifyXml } from '../../utils/formatXml'
 import CopyButton from '../../components/CopyButton'
 
 export default function XmlMinifier() {

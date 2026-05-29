@@ -135,5 +135,5 @@ export function findColorName(hex) {
   }
   
   const normalized = hex.toLowerCase()
-  return Object.entries(namedColors).find(([_, value]) => value === normalized)?.[0] || null
+  return Object.entries(namedColors).find(([, value]) => value === normalized)?.[0] || null
 }
