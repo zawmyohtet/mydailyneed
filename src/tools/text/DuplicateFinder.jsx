@@ -45,6 +45,8 @@ export default function DuplicateFinder() {
       title="Duplicate Finder"
       icon={["fas", "clone"]}
       description="Find duplicate items in a comma or newline separated list"
+      path="/tools/duplicate-finder"
+      keywords={["duplicate", "find", "list", "unique", "repeat", "distinct"]}
     >
       <div className="space-y-4">
         <div className="flex gap-6">

@@ -3,6 +3,21 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "description": "Free developer utility tools that run entirely in your browser. JSON formatter, XML tools, text utilities, and more.",
+  "keywords": [
+    "developer-tools",
+    "json-formatter",
+    "xml-minifier",
+    "base64",
+    "word-counter",
+    "uuid-generator",
+    "online-tools"
+  ],
+  "homepage": "https://mydailyneed.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mydailyneed/mydailyneed"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -21,6 +36,7 @@
     "jsonpath-plus": "^10.4.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-helmet-async": "^3.0.0",
     "react-router-dom": "^7.15.1",
     "tesseract.js": "^7.0.0"
   },

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { formatXml } from '../../utils/formatXml'
 import CopyButton from '../../components/CopyButton'
+import SEO from '../../components/SEO'
 
 const INDENT_OPTIONS = [
   { value: 2, label: '2 spaces' },
@@ -38,6 +39,12 @@ export default function XmlFormatter() {
 
   return (
     <div className="space-y-4">
+      <SEO
+        title="XML Formatter"
+        description="Prettify and validate XML with proper indentation"
+        path="/tools/xml-formatter"
+        keywords={['xml', 'format', 'prettify', 'beautify', 'validate']}
+      />
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
           <label htmlFor="indent" className="text-sm font-medium">Indent:</label>

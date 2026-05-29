@@ -85,6 +85,8 @@ export default function JsonAttributeExtractor() {
       title="JSON Attribute Extractor"
       icon={['fas', 'filter']}
       description="Extract specific attributes from JSON using JSONPath expressions"
+      path="/tools/json-attribute-extractor"
+      keywords={["json", "extract", "query", "path", "jsonpath", "filter", "selector"]}
     >
       <div className="space-y-4">
         <div className="flex flex-wrap items-center gap-4">

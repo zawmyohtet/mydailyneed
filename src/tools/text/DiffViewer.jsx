@@ -24,6 +24,8 @@ export default function DiffViewer() {
       title="Diff Viewer"
       icon={["fas", "code-compare"]}
       description="Compare two texts side by side and highlight differences"
+      path="/tools/diff-viewer"
+      keywords={["diff", "compare", "difference", "text", "side-by-side"]}
     >
       <div className="space-y-4">
         <div className="grid grid-cols-2 gap-4">

@@ -75,6 +75,8 @@ export default function ImageToText() {
       title="Image to Text (OCR)"
       icon={["fas", "image"]}
       description="Extract text from images using OCR technology powered by Tesseract.js"
+      path="/tools/image-to-text"
+      keywords={["image", "text", "ocr", "extract", "tesseract", "scan"]}
     >
       <div className="space-y-4">
         <div className="flex flex-wrap items-center gap-4">

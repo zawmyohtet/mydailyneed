@@ -53,6 +53,8 @@ export default function TimestampConverter() {
       title="Timestamp Converter"
       icon={["fas", "clock"]}
       description="Convert between Unix timestamps and human-readable dates"
+      path="/tools/timestamp-converter"
+      keywords={["timestamp", "date", "time", "unix", "convert"]}
     >
       <div className="space-y-4">
         <div>

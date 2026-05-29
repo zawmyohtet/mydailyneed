@@ -37,6 +37,8 @@ export default function JwtDecoder() {
       title="JWT Decoder"
       icon={["fas", "key"]}
       description="Decode JSON Web Tokens to view header and payload"
+      path="/tools/jwt-decoder"
+      keywords={["jwt", "token", "decode", "auth", "header", "payload"]}
     >
       <div className="space-y-4">
         <div>

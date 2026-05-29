@@ -35,6 +35,8 @@ export default function CaseConverter() {
       title="Case Converter"
       icon={["fas", "font"]}
       description="Convert text between different case formats"
+      path="/tools/case-converter"
+      keywords={["case", "convert", "uppercase", "lowercase", "camelcase", "snake"]}
     >
       <div className="space-y-4">
         <div>

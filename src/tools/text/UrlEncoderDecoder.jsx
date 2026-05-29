@@ -34,6 +34,8 @@ export default function UrlEncoderDecoder() {
       title="URL Encoder/Decoder"
       icon={["fas", "link"]}
       description="Encode URLs for safe transmission or decode encoded URLs"
+      path="/tools/url-encoder-decoder"
+      keywords={["url", "encode", "decode", "uri", "percent"]}
     >
       <div className="flex gap-4 mb-4">
         <button

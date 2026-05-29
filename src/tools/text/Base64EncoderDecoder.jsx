@@ -31,6 +31,8 @@ export default function Base64EncoderDecoder() {
       title="Base64 Encoder/Decoder"
       icon={["fas", "exchange-alt"]}
       description="Encode text to Base64 or decode Base64 back to text"
+      path="/tools/base64-encoder-decoder"
+      keywords={["base64", "encode", "decode", "text", "binary"]}
     >
       <div className="flex gap-4 mb-4">
         <button

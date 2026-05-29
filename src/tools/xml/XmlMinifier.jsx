@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { minifyXml } from '../../utils/formatXml'
 import CopyButton from '../../components/CopyButton'
+import SEO from '../../components/SEO'
 
 export default function XmlMinifier() {
   const [input, setInput] = useState('')
@@ -47,6 +48,12 @@ export default function XmlMinifier() {
 
   return (
     <div className="space-y-4">
+      <SEO
+        title="XML Minifier"
+        description="Strip whitespace from XML for compact output"
+        path="/tools/xml-minifier"
+        keywords={['xml', 'minify', 'compress', 'compact']}
+      />
       <div className="flex flex-wrap items-center gap-4">
         <label className="flex items-center gap-2 text-sm">
           <input

@@ -25,6 +25,8 @@ export default function RegexTester() {
       title="Regex Tester"
       icon={["fas", "search"]}
       description="Test and validate regular expressions with live matching"
+      path="/tools/regex-tester"
+      keywords={["regex", "regexp", "pattern", "match", "test"]}
     >
       <div className="space-y-4">
         <div>

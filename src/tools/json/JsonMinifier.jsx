@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { minifyJson } from '../../utils/formatJson'
 import CopyButton from '../../components/CopyButton'
+import SEO from '../../components/SEO'
 
 export default function JsonMinifier() {
   const [input, setInput] = useState('')
@@ -46,6 +47,12 @@ export default function JsonMinifier() {
 
   return (
     <div className="space-y-4">
+      <SEO
+        title="JSON Minifier"
+        description="Remove whitespace from JSON for compact output"
+        path="/tools/json-minifier"
+        keywords={['json', 'minify', 'compress', 'compact']}
+      />
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           {stats && (

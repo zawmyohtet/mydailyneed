@@ -15,6 +15,8 @@ export default function WordCounter() {
       title="Word Counter"
       icon={["fas", "calculator"]}
       description="Count words, characters, sentences, and more in your text"
+      path="/tools/word-counter"
+      keywords={["word", "count", "character", "sentence", "paragraph", "stats"]}
     >
       <div className="space-y-4">
         <div>

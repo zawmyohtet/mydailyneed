@@ -63,6 +63,8 @@ export default function ColorConverter() {
       title="Color Converter"
       icon={["fas", "palette"]}
       description="Convert colors between HEX, RGB, and HSL formats"
+      path="/tools/color-converter"
+      keywords={["color", "hex", "rgb", "hsl", "convert"]}
     >
       <div className="space-y-4">
         <div>

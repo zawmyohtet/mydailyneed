@@ -25,6 +25,8 @@ export default function UuidGenerator() {
       title="UUID Generator"
       icon={["fas", "fingerprint"]}
       description="Generate random UUID v4 identifiers"
+      path="/tools/uuid-generator"
+      keywords={["uuid", "guid", "identifier", "random", "generate"]}
     >
       <div className="space-y-4">
         <div>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { formatJson } from '../../utils/formatJson'
 import CopyButton from '../../components/CopyButton'
+import SEO from '../../components/SEO'
 
 const INDENT_OPTIONS = [
   { value: 2, label: '2 spaces' },
@@ -58,6 +59,12 @@ export default function JsonFormatter() {
 
   return (
     <div className="space-y-4">
+      <SEO
+        title="JSON Formatter"
+        description="Prettify and validate JSON with syntax highlighting"
+        path="/tools/json-formatter"
+        keywords={['json', 'format', 'prettify', 'beautify', 'validate']}
+      />
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
           <label htmlFor="indent" className="text-sm font-medium">Indent:</label>

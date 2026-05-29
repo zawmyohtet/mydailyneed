@@ -2,6 +2,7 @@ import { useState } from 'react'
 import jsYaml from 'js-yaml'
 import { formatJson } from '../../utils/formatJson'
 import CopyButton from '../../components/CopyButton'
+import SEO from '../../components/SEO'
 
 export default function JsonYamlConverter() {
   const [input, setInput] = useState('')
@@ -42,6 +43,12 @@ export default function JsonYamlConverter() {
 
   return (
     <div className="space-y-4">
+      <SEO
+        title="JSON ↔ YAML Converter"
+        description="Convert between JSON and YAML formats"
+        path="/tools/json-yaml"
+        keywords={['json', 'yaml', 'convert', 'transform']}
+      />
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
           <button

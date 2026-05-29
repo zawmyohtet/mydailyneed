@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import SEO from './SEO'
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -36,9 +37,15 @@ class ErrorBoundary extends Component {
   }
 }
 
-export default function ToolLayout({ title, icon, description, children }) {
+export default function ToolLayout({ title, icon, description, path, keywords, children }) {
   return (
     <ErrorBoundary>
+      <SEO
+        title={title}
+        description={description}
+        keywords={keywords?.join(', ')}
+        path={path}
+      />
       <div className="max-w-6xl mx-auto space-y-6">
         <div className="flex items-center gap-3">
           {icon && <FontAwesomeIcon icon={icon} className="text-2xl text-primary-600" />}

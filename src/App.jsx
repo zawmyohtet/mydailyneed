@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import ToolSearch from './components/ToolSearch'
 import KeyboardShortcutsModal from './components/KeyboardShortcutsModal'
+import SEO from './components/SEO'
 import { tools } from './tools/registry'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { useKeyboardShortcuts } from './hooks/useKeyboardShortcuts'
@@ -17,6 +18,10 @@ tools.forEach(tool => {
 function Home() {
   return (
     <div className="max-w-4xl mx-auto text-center py-12">
+      <SEO
+        path="/"
+        keywords="developer tools, json formatter, xml minifier, base64 encoder, word counter, uuid generator, free online tools"
+      />
       <h1 className="text-4xl font-bold mb-4">Welcome to MyDailyNeed</h1>
       <p className="text-gray-600 dark:text-gray-400 mb-8">
         A collection of lightweight, privacy-first developer utility tools that run entirely in your browser.

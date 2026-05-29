@@ -25,6 +25,8 @@ export default function MultilineToList() {
       title="Multiline to List"
       icon={["fas", "list"]}
       description="Convert multiline text to a comma-separated list"
+      path="/tools/multiline-to-list"
+      keywords={["multiline", "comma", "list", "csv", "separator", "join"]}
     >
       <div className="space-y-4">
         <div>
