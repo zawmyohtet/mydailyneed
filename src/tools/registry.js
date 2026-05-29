@@ -30,6 +30,16 @@ export const tools = [
     keywords: ["json", "yaml", "convert", "transform"],
   },
   {
+    id: "json-attribute-extractor",
+    name: "JSON Attribute Extractor",
+    description: "Extract specific attributes from JSON using JSONPath expressions",
+    category: "JSON",
+    icon: ["fas", "filter"],
+    path: "/tools/json-attribute-extractor",
+    component: () => import("./json/JsonAttributeExtractor"),
+    keywords: ["json", "extract", "query", "path", "jsonpath", "filter", "selector"],
+  },
+  {
     id: "xml-formatter",
     name: "XML Formatter",
     description: "Prettify and validate XML with proper indentation",

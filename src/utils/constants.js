@@ -1,4 +1,5 @@
 export const MAX_JSON_SIZE = 1024 * 1024
+export const MAX_JSON_PATH_SIZE = 5 * 1024 * 1024
 export const MAX_OCR_FILE_SIZE = 5 * 1024 * 1024
 
 export const SUPPORTED_IMAGE_FORMATS = [
