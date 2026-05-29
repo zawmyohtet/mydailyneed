@@ -100,6 +100,16 @@ export const tools = [
     keywords: ["duplicate", "find", "list", "unique", "repeat", "distinct"],
   },
   {
+    id: "multiline-to-list",
+    name: "Multiline to List",
+    description: "Convert multiline text to a comma-separated list",
+    category: "Text",
+    icon: ["fas", "list"],
+    path: "/tools/multiline-to-list",
+    component: () => import("./text/MultilineToList"),
+    keywords: ["multiline", "comma", "list", "csv", "separator", "join"],
+  },
+  {
     id: "image-to-text",
     name: "Image to Text (OCR)",
     description: "Extract text from images using OCR technology powered by Tesseract.js",

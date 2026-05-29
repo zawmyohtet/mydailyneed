@@ -92,6 +92,24 @@ export function findDuplicates(input, options = {}) {
   }
 }
 
+export function multilineToCommaList(input, options = {}) {
+  const { separator = ', ', trimWhitespace = true, removeEmpty = true } = options
+
+  if (!input) return ''
+
+  let lines = input.split('\n')
+
+  if (trimWhitespace) {
+    lines = lines.map(line => line.trim())
+  }
+
+  if (removeEmpty) {
+    lines = lines.filter(line => line.length > 0)
+  }
+
+  return lines.join(separator)
+}
+
 export function convertCase(text, format) {
   if (!text) return ''
   
