@@ -10,6 +10,11 @@ import { tools } from './tools/registry'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { useKeyboardShortcuts } from './hooks/useKeyboardShortcuts'
 
+const toolComponents = {}
+tools.forEach(tool => {
+  toolComponents[tool.id] = lazy(tool.component)
+})
+
 function Home() {
   return (
     <div className="max-w-4xl mx-auto text-center py-12">
@@ -94,7 +99,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               {tools.map(tool => {
-                const ToolComponent = lazy(tool.component)
+                const ToolComponent = toolComponents[tool.id]
                 return (
                   <Route
                     key={tool.id}

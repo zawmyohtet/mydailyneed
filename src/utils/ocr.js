@@ -55,9 +55,9 @@ export async function extractTextFromImage(file, onProgress, language = 'eng') {
     console.error('OCR Error:', e)
     const message = e?.message || String(e) || 'Unknown error'
     if (message.includes('Failed to load') || message.includes('worker')) {
-      throw new Error('Failed to load OCR engine. Please check your internet connection.')
+      throw new Error('Failed to load OCR engine. Please check your internet connection.', { cause: e })
     }
-    throw new Error(`OCR failed: ${message}`)
+    throw new Error(`OCR failed: ${message}`, { cause: e })
   }
 }
 

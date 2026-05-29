@@ -1,57 +1,52 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { downloadText } from './downloadText'
 
+const originalCreateElement = document.createElement.bind(document)
+
 describe('downloadText', () => {
+  beforeEach(() => {
+    vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:url')
+    vi.spyOn(URL, 'revokeObjectURL')
+  })
+
+  afterEach(() => {
+    vi.restoreAllMocks()
+  })
+
   it('creates blob with correct content', () => {
-    const BlobMock = vi.fn().mockImplementation(() => ({ type: 'text/plain' }))
-    const originalBlob = window.Blob
-    window.Blob = BlobMock
+    const blobSpy = vi.spyOn(window, 'Blob')
 
     downloadText('test content', 'test.txt')
 
-    expect(BlobMock).toHaveBeenCalledWith(['test content'], { type: 'text/plain' })
-    window.Blob = originalBlob
+    expect(blobSpy).toHaveBeenCalledWith(['test content'], { type: 'text/plain' })
   })
 
   it('creates and clicks anchor element', () => {
     const clickSpy = vi.fn()
-    const createSpy = vi.spyOn(document, 'createElement').mockImplementation(() => ({
-      href: '',
-      download: 'test.txt',
-      click: clickSpy,
-    }))
-    const appendSpy = vi.spyOn(document.body, 'appendChild')
-    const removeSpy = vi.spyOn(document.body, 'removeChild')
-    const revokeSpy = vi.spyOn(URL, 'revokeObjectURL')
-    vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:url')
+    const createSpy = vi.spyOn(document, 'createElement').mockImplementation((tag) => {
+      const el = originalCreateElement(tag)
+      el.download = 'test.txt'
+      el.click = clickSpy
+      return el
+    })
 
     downloadText('content', 'test.txt')
 
     expect(createSpy).toHaveBeenCalledWith('a')
     expect(clickSpy).toHaveBeenCalled()
-    expect(revokeSpy).toHaveBeenCalled()
-
-    createSpy.mockRestore()
-    appendSpy.mockRestore()
-    removeSpy.mockRestore()
-    revokeSpy.mockRestore()
+    expect(URL.revokeObjectURL).toHaveBeenCalled()
   })
 
   it('uses default filename', () => {
-    const createSpy = vi.spyOn(document, 'createElement').mockImplementation(() => ({
-      href: '',
-      download: '',
-      click: vi.fn(),
-    }))
-    vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:url')
-    vi.spyOn(URL, 'revokeObjectURL')
-    vi.spyOn(document.body, 'appendChild')
-    vi.spyOn(document.body, 'removeChild')
+    const createSpy = vi.spyOn(document, 'createElement').mockImplementation((tag) => {
+      const el = originalCreateElement(tag)
+      el.click = vi.fn()
+      return el
+    })
 
     downloadText('content')
 
-    expect(createSpy().download).toBe('')
-
-    createSpy.mockRestore()
+    expect(createSpy).toHaveBeenCalledWith('a')
+    expect(createSpy.mock.results[0].value.download).toBe('extracted-text.txt')
   })
 })
