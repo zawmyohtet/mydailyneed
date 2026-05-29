@@ -110,6 +110,75 @@ export function multilineToCommaList(input, options = {}) {
   return lines.join(separator)
 }
 
+import { diffLines, diffWords } from 'diff'
+
+export function computeDiff(left, right, mode = 'line') {
+
+  if (!left && !right) return { left: [], right: [] }
+
+  const lineDiffs = diffLines(left || '', right || '')
+
+  if (mode === 'line') {
+    const leftChunks = []
+    const rightChunks = []
+
+    for (const part of lineDiffs) {
+      const lines = part.value.split('\n')
+      if (lines[lines.length - 1] === '') lines.pop()
+
+      for (const line of lines) {
+        if (part.added) {
+          leftChunks.push({ type: 'empty', value: '' })
+          rightChunks.push({ type: 'added', value: line })
+        } else if (part.removed) {
+          leftChunks.push({ type: 'removed', value: line })
+          rightChunks.push({ type: 'empty', value: '' })
+        } else {
+          leftChunks.push({ type: 'unchanged', value: line })
+          rightChunks.push({ type: 'unchanged', value: line })
+        }
+      }
+    }
+
+    return { left: leftChunks, right: rightChunks }
+  }
+
+  const leftChunks = []
+  const rightChunks = []
+
+  for (const part of lineDiffs) {
+    if (part.added || part.removed) {
+      const words = diffWords(
+        part.removed ? part.value : '',
+        part.added ? part.value : ''
+      )
+
+      for (const w of words) {
+        if (w.added) {
+          leftChunks.push({ type: 'empty', value: '' })
+          rightChunks.push({ type: 'added', value: w.value })
+        } else if (w.removed) {
+          leftChunks.push({ type: 'removed', value: w.value })
+          rightChunks.push({ type: 'empty', value: '' })
+        } else {
+          leftChunks.push({ type: 'unchanged', value: w.value })
+          rightChunks.push({ type: 'unchanged', value: w.value })
+        }
+      }
+    } else {
+      const lines = part.value.split('\n')
+      if (lines[lines.length - 1] === '') lines.pop()
+
+      for (const line of lines) {
+        leftChunks.push({ type: 'unchanged', value: line })
+        rightChunks.push({ type: 'unchanged', value: line })
+      }
+    }
+  }
+
+  return { left: leftChunks, right: rightChunks }
+}
+
 export function convertCase(text, format) {
   if (!text) return ''
   

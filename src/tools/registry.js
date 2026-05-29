@@ -110,6 +110,16 @@ export const tools = [
     keywords: ["multiline", "comma", "list", "csv", "separator", "join"],
   },
   {
+    id: "diff-viewer",
+    name: "Diff Viewer",
+    description: "Compare two texts side by side and highlight differences",
+    category: "Text",
+    icon: ["fas", "code-compare"],
+    path: "/tools/diff-viewer",
+    component: () => import("./text/DiffViewer"),
+    keywords: ["diff", "compare", "difference", "text", "side-by-side"],
+  },
+  {
     id: "image-to-text",
     name: "Image to Text (OCR)",
     description: "Extract text from images using OCR technology powered by Tesseract.js",
