@@ -6,7 +6,7 @@ Client-side only web application providing developer utility tools. 100% static,
 ## Tech Stack
 - **Framework:** React 18 + Vite
 - **Routing:** React Router v6 (hash-based for static hosting)
-- **Styling:** Tailwind CSS only — no CSS modules, styled-components, or inline styles
+- **Styling:** Tailwind CSS only (`darkMode: 'class'`) — no CSS modules, styled-components, or inline styles
 - **Icons:** FontAwesome (via @fortawesome/react-fontawesome)
 - **OCR:** Tesseract.js v5 (WASM, loaded on-demand)
 - **Testing:** Vitest + React Testing Library (80% minimum coverage)
@@ -17,6 +17,7 @@ Client-side only web application providing developer utility tools. 100% static,
 - **Tool registry** — all tools registered in `src/tools/registry.js`; never hardcode tool lists elsewhere
 - **Lazy loading** — all tools use `React.lazy()` + `Suspense` for code splitting
 - **Shared components** — `CopyButton`, `FileDropZone`, `ToolLayout`, `Sidebar`, `Header` in `src/components/`
+- **Context providers** — `ThemeContext` in `src/context/` manages global theme state
 - **Error boundaries** — wrap each tool to prevent one broken tool from crashing others
 
 ## Key Constraints

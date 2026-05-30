@@ -107,6 +107,8 @@ src/
 ├── App.jsx                  # Main app with routing
 ├── main.jsx                 # Entry point
 ├── index.css                # Tailwind imports + global styles
+├── context/
+│   └── ThemeContext.jsx      # Shared theme state via React Context
 ├── components/              # Shared UI components
 │   ├── CopyButton.jsx
 │   ├── FileDropZone.jsx
