@@ -1,7 +1,6 @@
 # MyDailyNeed
 
-[![CI](https://github.com/anomalyco/mydailyneed/actions/workflows/ci.yml/badge.svg)](https://github.com/anomalyco/mydailyneed/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/anomalyco/mydailyneed/branch/main/graph/badge.svg)](https://codecov.io/gh/anomalyco/mydailyneed)
+[![CI](https://github.com/zawmyohtet/mydailyneed/actions/workflows/ci.yml/badge.svg)](https://github.com/zawmyohtet/mydailyneed/actions/workflows/ci.yml)
 [![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-000000?logo=vercel)](https://mydailyneed.vercel.app)
 
 > A collection of lightweight, privacy-first developer utility tools that run entirely in your browser. No data is ever sent to a server — everything happens client-side.
@@ -15,12 +14,16 @@
 | **JSON** | JSON Formatter | Prettify and validate JSON with syntax highlighting |
 | | JSON Minifier | Remove whitespace from JSON for compact output |
 | | JSON ↔ YAML Converter | Convert between JSON and YAML formats |
+| | JSON Attribute Extractor | Extract specific attributes using JSONPath expressions |
 | **XML** | XML Formatter | Prettify and validate XML with proper indentation |
 | | XML Minifier | Strip whitespace from XML for compact output |
 | **Text** | Base64 Encoder/Decoder | Encode text to Base64 or decode Base64 back to text |
 | | URL Encoder/Decoder | Encode URLs for safe transmission or decode encoded URLs |
 | | Word Counter | Count words, characters, sentences, paragraphs and more |
 | | Case Converter | Convert text between uppercase, lowercase, camelCase, snake_case and more |
+| | Duplicate Finder | Find duplicate items in a comma or newline separated list |
+| | Multiline to List | Convert multiline text to a comma-separated list |
+| | Diff Viewer | Compare two texts side by side and highlight differences |
 | **Image** | Image to Text (OCR) | Extract text from images using Tesseract.js |
 | **Misc** | Timestamp Converter | Convert between Unix timestamps and human-readable dates |
 | | UUID Generator | Generate random UUID v4 identifiers |
@@ -38,6 +41,8 @@
 - **Tool search** — press `Cmd+K` to quickly find and navigate to any tool
 - **Copy to clipboard** — one-click copy for all tool outputs
 - **Responsive** — works on desktop and mobile
+- **SEO optimized** — dynamic meta tags, Open Graph, Twitter Cards, structured data (JSON-LD)
+- **AI-friendly** — llms.txt and llms-full.txt for LLM discoverability
 
 ## Tech Stack
 
@@ -49,6 +54,7 @@
 | [Tailwind CSS 3](https://tailwindcss.com/) | Utility-first styling |
 | [Font Awesome 7](https://fontawesome.com/) | Icon library |
 | [Tesseract.js](https://tesseract.projectnaptha.com/) | OCR engine for image-to-text |
+| [react-helmet-async](https://github.com/staylor/react-helmet-async) | Per-page `<head>` management for SEO |
 | [Vitest 4](https://vitest.dev/) | Unit testing framework |
 | [js-yaml](https://github.com/nodeca/js-yaml) | YAML parsing/serialization |
 
@@ -106,6 +112,7 @@ src/
 │   ├── FileDropZone.jsx
 │   ├── Header.jsx
 │   ├── KeyboardShortcutsModal.jsx
+│   ├── SEO.jsx              # Per-page meta tags, OG, Twitter, JSON-LD
 │   ├── Sidebar.jsx
 │   ├── ToolLayout.jsx
 │   └── ToolSearch.jsx
@@ -130,6 +137,16 @@ src/
     ├── textTransforms.js
     ├── timestamp.js
     └── uuid.js
+
+public/
+├── favicon.svg              # SVG favicon (primary)
+├── favicon-32.png           # PNG fallback favicon
+├── apple-touch-icon.png     # iOS home screen icon
+├── og-image.png             # Open Graph social sharing image
+├── robots.txt               # Crawler rules (includes AI crawlers)
+├── sitemap.xml              # All indexable URLs
+├── llms.txt                 # LLM-friendly site overview
+└── llms-full.txt            # Comprehensive tool details for LLMs
 ```
 
 ## Deployment
@@ -149,10 +166,9 @@ A `vercel.json` is included with:
 
 GitHub Actions runs on every push and pull request to `main`:
 
-- **Test job** — installs dependencies, runs tests with coverage, uploads to Codecov
-- **Build job** — builds the production bundle and verifies the output
+- **Test job** — installs dependencies and runs tests
 
-A `CODECOV_TOKEN` secret must be configured in the repository settings.
+Vercel automatically builds and deploys on merge to `main`.
 
 ## Contributing
 
