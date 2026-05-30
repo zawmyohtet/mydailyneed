@@ -7,7 +7,7 @@ import ToolSearch from './components/ToolSearch'
 import KeyboardShortcutsModal from './components/KeyboardShortcutsModal'
 import SEO from './components/SEO'
 import { tools } from './tools/registry'
-import { useLocalStorage } from './hooks/useLocalStorage'
+import { useTheme } from './context/ThemeContext'
 import { useKeyboardShortcuts } from './hooks/useKeyboardShortcuts'
 
 const toolComponents = {}
@@ -22,7 +22,7 @@ function Home() {
         path="/"
         keywords="developer tools, json formatter, xml minifier, base64 encoder, word counter, uuid generator, free online tools"
       />
-      <h1 className="text-4xl font-bold mb-4">Welcome to MyDailyNeed</h1>
+      <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">Welcome to MyDailyNeed</h1>
       <p className="text-gray-600 dark:text-gray-400 mb-8">
         A collection of lightweight, privacy-first developer utility tools that run entirely in your browser.
       </p>
@@ -33,7 +33,7 @@ function Home() {
             href={`#${tool.path}`}
             className="p-4 border rounded-lg hover:border-primary-500 dark:hover:border-primary-400 transition-colors"
           >
-            <h3 className="font-medium mb-1">{tool.name}</h3>
+            <h3 className="font-medium mb-1 text-gray-900 dark:text-gray-100">{tool.name}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">{tool.description}</p>
           </a>
         ))}
@@ -51,7 +51,7 @@ function Loading() {
 }
 
 function App() {
-  const [theme] = useLocalStorage('theme', 'light')
+  const { theme } = useTheme()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [shortcutsOpen, setShortcutsOpen] = useState(false)

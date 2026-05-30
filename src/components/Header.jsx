@@ -1,12 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useLocalStorage } from '../hooks/useLocalStorage'
+import { useTheme } from '../context/ThemeContext'
 
 export default function Header({ toolName, onOpenShortcuts }) {
-  const [theme, setTheme] = useLocalStorage('theme', 'light')
-
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
-  }
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <header className="bg-white dark:bg-gray-800 border-b dark:border-gray-700 px-6 py-4">

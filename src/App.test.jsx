@@ -2,6 +2,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen, act } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import App from './App'
+import { ThemeProvider } from './context/ThemeContext'
 
 vi.mock('./tools/registry', () => ({
   tools: [
@@ -32,7 +33,9 @@ vi.mock('./tools/registry', () => ({
 function renderApp(initialRoute = '/') {
   return render(
     <MemoryRouter initialEntries={[initialRoute]}>
-      <App />
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
     </MemoryRouter>
   )
 }
