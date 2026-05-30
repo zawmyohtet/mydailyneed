@@ -52,7 +52,7 @@ export default function ToolSearch({ tools, isOpen, onClose, onSelect }) {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search tools..."
-              className="flex-1 bg-transparent outline-none text-lg"
+              className="flex-1 bg-transparent outline-none text-lg text-gray-900 dark:text-gray-100"
               aria-label="Search tools"
             />
             {query && (
@@ -61,7 +61,7 @@ export default function ToolSearch({ tools, isOpen, onClose, onSelect }) {
                 className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 aria-label="Clear search"
               >
-                <FontAwesomeIcon icon={['fas', 'times']} />
+                <FontAwesomeIcon icon={['fas', 'times']} className="text-gray-600 dark:text-gray-400" />
               </button>
             )}
           </div>
@@ -89,7 +89,7 @@ export default function ToolSearch({ tools, isOpen, onClose, onSelect }) {
                     <FontAwesomeIcon icon={tool.icon} className="text-primary-600 dark:text-primary-400" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-medium">{tool.name}</h3>
+                    <h3 className="font-medium text-gray-900 dark:text-gray-100">{tool.name}</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">{tool.description}</p>
                   </div>
                 </div>
