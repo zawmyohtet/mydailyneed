@@ -140,6 +140,16 @@ export const tools = [
     keywords: ["image", "text", "ocr", "extract", "tesseract", "scan"],
   },
   {
+    id: "notes-and-todos",
+    name: "Notes & Todos",
+    description: "Quick notes and todo lists saved locally in your browser",
+    category: "Misc",
+    icon: ["fas", "sticky-note"],
+    path: "/tools/notes-and-todos",
+    component: () => import("./misc/NotesAndTodos"),
+    keywords: ["notes", "todos", "sticky", "reminders", "tasks"],
+  },
+  {
     id: "timestamp-converter",
     name: "Timestamp Converter",
     description: "Convert between Unix timestamps and human-readable dates",

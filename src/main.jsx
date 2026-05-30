@@ -7,7 +7,7 @@ import {
   faBars, faSearch, faTimes, faCloudUploadAlt, faExclamationTriangle,
   faFileCode, faCompress, faExchangeAlt, faFilter, faCode, faLink,
   faCalculator, faFont, faClone, faList, faCodeCompare, faImage,
-  faClock, faFingerprint, faPalette, faKey, faMoon, faSun
+  faClock, faFingerprint, faPalette, faKey, faMoon, faSun, faStickyNote
 } from '@fortawesome/free-solid-svg-icons'
 import App from './App'
 import { ThemeProvider } from './context/ThemeContext'
@@ -17,7 +17,7 @@ library.add(
   faBars, faSearch, faTimes, faCloudUploadAlt, faExclamationTriangle,
   faFileCode, faCompress, faExchangeAlt, faFilter, faCode, faLink,
   faCalculator, faFont, faClone, faList, faCodeCompare, faImage,
-  faClock, faFingerprint, faPalette, faKey, faMoon, faSun
+  faClock, faFingerprint, faPalette, faKey, faMoon, faSun, faStickyNote
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
