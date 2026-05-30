@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { minifyXml } from '../../utils/formatXml'
 import CopyButton from '../../components/CopyButton'
 import SEO from '../../components/SEO'
@@ -54,13 +55,17 @@ export default function XmlMinifier() {
         path="/tools/xml-minifier"
         keywords={['xml', 'minify', 'compress', 'compact']}
       />
+      <div className="flex items-center gap-3">
+        <FontAwesomeIcon icon={['fas', 'compress']} className="text-2xl text-primary-600 dark:text-primary-400" />
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">XML Minifier</h1>
+      </div>
       <div className="flex flex-wrap items-center gap-4">
-        <label className="flex items-center gap-2 text-sm">
+        <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
           <input
             type="checkbox"
             checked={preserveComments}
             onChange={(e) => setPreserveComments(e.target.checked)}
-            className="rounded"
+            className="rounded border-gray-300 dark:border-gray-600"
           />
           Preserve comments
         </label>
@@ -101,26 +106,26 @@ export default function XmlMinifier() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="input" className="block text-sm font-medium mb-2">Input</label>
+          <label htmlFor="input" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Input</label>
           <textarea
             id="input"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder='Paste your XML here, e.g., <root><child>text</child></root>'
-            className="w-full h-96 p-4 border rounded-lg font-mono text-sm dark:bg-gray-800 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg font-mono text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
 
         <div>
           <div className="flex items-center justify-between mb-2">
-            <label className="block text-sm font-medium">Output</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Output</label>
             {output && <CopyButton text={output} label="Copy minified XML" />}
           </div>
           <textarea
             readOnly
             value={output}
             placeholder="Minified XML will appear here"
-            className="w-full h-96 p-4 border rounded-lg font-mono text-sm bg-gray-50 dark:bg-gray-800/50 dark:border-gray-600"
+            className="w-full h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg font-mono text-sm bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 dark:placeholder-gray-500"
           />
         </div>
       </div>

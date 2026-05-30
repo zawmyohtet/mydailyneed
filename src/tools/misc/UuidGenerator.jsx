@@ -30,7 +30,7 @@ export default function UuidGenerator() {
     >
       <div className="space-y-4">
         <div>
-          <label htmlFor="count" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="count" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Number of UUIDs to generate
           </label>
           <input
@@ -40,7 +40,7 @@ export default function UuidGenerator() {
             max="100"
             value={count}
             onChange={(e) => setCount(Math.min(100, Math.max(1, parseInt(e.target.value) || 1)))}
-            className="w-32 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+            className="w-32 p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           />
         </div>
 
@@ -55,7 +55,7 @@ export default function UuidGenerator() {
           <button
             onClick={handleClear}
             data-action="clear"
-            className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-medium"
+            className="px-6 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition font-medium"
           >
             Clear
           </button>
@@ -72,7 +72,7 @@ export default function UuidGenerator() {
 
         {uuids.length > 0 && (
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Generated UUIDs ({uuids.length})
             </label>
             <div className="space-y-2">
@@ -82,7 +82,7 @@ export default function UuidGenerator() {
                     type="text"
                     value={uuid}
                     readOnly
-                    className="flex-1 p-2 border border-gray-300 rounded-lg bg-gray-50 font-mono text-sm"
+                    className="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50 font-mono text-sm text-gray-900 dark:text-gray-100"
                   />
                   <CopyButton text={uuid} />
                 </div>

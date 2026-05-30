@@ -56,6 +56,7 @@ npm run lint             # Run ESLint (if configured)
 - Errors shown inline — never `alert()` or `confirm()`
 - Empty input handled gracefully — no crashes
 - `localStorage` only for user preferences (theme), never user data
+- **Dark mode:** All tools use consistent `dark:` variant patterns. See `docs/FOUNDATION.md` §6 for the full palette reference (labels, inputs, outputs, buttons, error/warning sections, stat cards, diff viewers).
 
 ## Keyboard Shortcuts
 | Shortcut | Action |

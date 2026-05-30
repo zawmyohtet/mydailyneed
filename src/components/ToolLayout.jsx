@@ -48,8 +48,8 @@ export default function ToolLayout({ title, icon, description, path, keywords, c
       />
       <div className="max-w-6xl mx-auto space-y-6">
         <div className="flex items-center gap-3">
-          {icon && <FontAwesomeIcon icon={icon} className="text-2xl text-primary-600" />}
-          <h1 className="text-2xl font-bold">{title}</h1>
+          {icon && <FontAwesomeIcon icon={icon} className="text-2xl text-primary-600 dark:text-primary-400" />}
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">{title}</h1>
         </div>
         {description && <p className="text-gray-600 dark:text-gray-400">{description}</p>}
         {children}

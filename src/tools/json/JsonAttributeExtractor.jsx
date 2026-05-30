@@ -109,7 +109,7 @@ export default function JsonAttributeExtractor() {
         </div>
 
         <div>
-          <label htmlFor="path" className="block text-sm font-medium mb-2">
+          <label htmlFor="path" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
             JSONPath Expression
           </label>
           <input
@@ -118,7 +118,7 @@ export default function JsonAttributeExtractor() {
             value={path}
             onChange={(e) => setPath(e.target.value)}
             placeholder="e.g., $[*].name or $[0].address.city"
-            className="w-full px-4 py-3 border rounded-lg font-mono text-sm dark:bg-gray-800 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg font-mono text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
           <div className="mt-2 flex flex-wrap gap-2">
             {EXAMPLE_PATHS.map((example) => (
@@ -142,7 +142,7 @@ export default function JsonAttributeExtractor() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="input" className="block text-sm font-medium mb-2">
+            <label htmlFor="input" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
               Input JSON
             </label>
             <textarea
@@ -150,20 +150,20 @@ export default function JsonAttributeExtractor() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Paste your JSON here..."
-              className="w-full h-96 p-4 border rounded-lg font-mono text-sm dark:bg-gray-800 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500"
+              className="w-full h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg font-mono text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
             />
           </div>
 
           <div>
             <div className="flex items-center justify-between mb-2">
-              <label className="block text-sm font-medium">Extracted Result</label>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Extracted Result</label>
               {output && <CopyButton text={output} label="Copy result" />}
             </div>
             <textarea
               readOnly
               value={output}
               placeholder="Extracted attributes will appear here..."
-              className="w-full h-96 p-4 border rounded-lg font-mono text-sm bg-gray-50 dark:bg-gray-800/50 dark:border-gray-600"
+              className="w-full h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg font-mono text-sm bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 dark:placeholder-gray-500"
             />
           </div>
         </div>

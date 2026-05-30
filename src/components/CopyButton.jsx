@@ -21,7 +21,7 @@ export default function CopyButton({ text, label }) {
       onClick={handleCopy}
       data-action="copy"
       aria-label={label || 'Copy to clipboard'}
-      className="flex items-center gap-2 px-3 py-2 text-sm border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+      className="flex items-center gap-2 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
     >
       <FontAwesomeIcon icon={copied ? ['fas', 'check'] : ['fas', 'copy']} />
       <span>{copied ? 'Copied' : 'Copy'}</span>

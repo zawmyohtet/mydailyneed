@@ -68,7 +68,7 @@ export default function ColorConverter() {
     >
       <div className="space-y-4">
         <div>
-          <label htmlFor="input" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="input" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Color value
           </label>
           <div className="flex gap-2">
@@ -81,12 +81,12 @@ export default function ColorConverter() {
                 inputFormat === 'hex' ? '#RRGGBB' :
                 inputFormat === 'rgb' ? 'R,G,B' : 'H,S,L'
               }
-              className="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono text-sm"
+              className="flex-1 p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 dark:placeholder-gray-500"
             />
             {results && (
               <div
                 data-testid="color-preview"
-                className="w-16 h-10 rounded border border-gray-300"
+                className="w-16 h-10 rounded border border-gray-300 dark:border-gray-600"
                 style={{ backgroundColor: results.hex }}
               />
             )}
@@ -94,7 +94,7 @@ export default function ColorConverter() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Input format
           </label>
           <div className="flex gap-4">
@@ -106,7 +106,7 @@ export default function ColorConverter() {
                 onChange={() => setInputFormat('hex')}
                 className="text-blue-600 focus:ring-blue-500"
               />
-              <span className="text-sm text-gray-700">HEX</span>
+              <span className="text-sm text-gray-700 dark:text-gray-300">HEX</span>
             </label>
             <label className="flex items-center gap-2">
               <input
@@ -116,7 +116,7 @@ export default function ColorConverter() {
                 onChange={() => setInputFormat('rgb')}
                 className="text-blue-600 focus:ring-blue-500"
               />
-              <span className="text-sm text-gray-700">RGB</span>
+              <span className="text-sm text-gray-700 dark:text-gray-300">RGB</span>
             </label>
             <label className="flex items-center gap-2">
               <input
@@ -126,7 +126,7 @@ export default function ColorConverter() {
                 onChange={() => setInputFormat('hsl')}
                 className="text-blue-600 focus:ring-blue-500"
               />
-              <span className="text-sm text-gray-700">HSL</span>
+              <span className="text-sm text-gray-700 dark:text-gray-300">HSL</span>
             </label>
           </div>
         </div>
@@ -142,23 +142,23 @@ export default function ColorConverter() {
           <button
             onClick={handleClear}
             data-action="clear"
-            className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-medium"
+            className="px-6 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition font-medium"
           >
             Clear
           </button>
         </div>
 
         {error && (
-          <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-            <p className="text-red-800 text-sm font-medium">Error</p>
-            <p className="text-red-700 text-sm mt-1">{error}</p>
+          <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+            <p className="text-red-800 dark:text-red-400 text-sm font-medium">Error</p>
+            <p className="text-red-700 dark:text-red-400 text-sm mt-1">{error}</p>
           </div>
         )}
 
         {results && (
           <div className="space-y-3">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 HEX
               </label>
               <div className="flex gap-2">
@@ -166,14 +166,14 @@ export default function ColorConverter() {
                   type="text"
                   value={results.hex}
                   readOnly
-                  className="flex-1 p-2 border border-gray-300 rounded-lg bg-gray-50 font-mono text-sm"
+                  className="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50 font-mono text-sm text-gray-900 dark:text-gray-100"
                 />
                 <CopyButton text={results.hex} />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 RGB
               </label>
               <div className="flex gap-2">
@@ -181,14 +181,14 @@ export default function ColorConverter() {
                   type="text"
                   value={`rgb(${results.rgb.r}, ${results.rgb.g}, ${results.rgb.b})`}
                   readOnly
-                  className="flex-1 p-2 border border-gray-300 rounded-lg bg-gray-50 font-mono text-sm"
+                  className="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50 font-mono text-sm text-gray-900 dark:text-gray-100"
                 />
                 <CopyButton text={`rgb(${results.rgb.r}, ${results.rgb.g}, ${results.rgb.b})`} />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 HSL
               </label>
               <div className="flex gap-2">
@@ -196,7 +196,7 @@ export default function ColorConverter() {
                   type="text"
                   value={`hsl(${results.hsl.h}, ${results.hsl.s}%, ${results.hsl.l}%)`}
                   readOnly
-                  className="flex-1 p-2 border border-gray-300 rounded-lg bg-gray-50 font-mono text-sm"
+                  className="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50 font-mono text-sm text-gray-900 dark:text-gray-100"
                 />
                 <CopyButton text={`hsl(${results.hsl.h}, ${results.hsl.s}%, ${results.hsl.l}%)`} />
               </div>

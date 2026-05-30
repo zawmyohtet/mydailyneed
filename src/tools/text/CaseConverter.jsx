@@ -40,7 +40,7 @@ export default function CaseConverter() {
     >
       <div className="space-y-4">
         <div>
-          <label htmlFor="input" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="input" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Enter your text
           </label>
           <textarea
@@ -48,19 +48,19 @@ export default function CaseConverter() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Start typing or paste your text here..."
-            className="w-full h-32 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm resize-none"
+            className="w-full h-32 p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm resize-none bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 dark:placeholder-gray-500"
           />
         </div>
 
         <div>
-          <label htmlFor="caseSelect" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="caseSelect" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Select case format
           </label>
           <select
             id="caseSelect"
             value={selectedCase}
             onChange={(e) => setSelectedCase(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+            className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           >
             {CASE_OPTIONS.map(option => (
               <option key={option.value} value={option.value}>
@@ -81,14 +81,14 @@ export default function CaseConverter() {
           <button
             onClick={handleClear}
             data-action="clear"
-            className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-medium"
+            className="px-6 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition font-medium"
           >
             Clear
           </button>
         </div>
 
         <div>
-          <label htmlFor="output" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="output" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Converted text
           </label>
           <div className="relative">
@@ -97,7 +97,7 @@ export default function CaseConverter() {
               value={output}
               readOnly
               placeholder="Output will appear here..."
-              className="w-full h-32 p-3 border border-gray-300 rounded-lg bg-gray-50 font-mono text-sm resize-none"
+              className="w-full h-32 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50 font-mono text-sm resize-none text-gray-900 dark:text-gray-100 dark:placeholder-gray-500"
             />
             <CopyButton text={output} />
           </div>

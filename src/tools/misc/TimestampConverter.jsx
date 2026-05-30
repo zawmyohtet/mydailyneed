@@ -58,7 +58,7 @@ export default function TimestampConverter() {
     >
       <div className="space-y-4">
         <div>
-          <label htmlFor="input" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="input" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Input (timestamp or date)
           </label>
           <div className="flex gap-2">
@@ -68,11 +68,11 @@ export default function TimestampConverter() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="e.g., 1609459200000 or 2021-01-01T00:00:00Z"
-              className="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono text-sm"
+              className="flex-1 p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 dark:placeholder-gray-500"
             />
             <button
               onClick={handleNow}
-              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-medium text-sm"
+              className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition font-medium text-sm"
             >
               Now
             </button>
@@ -80,14 +80,14 @@ export default function TimestampConverter() {
         </div>
 
         <div>
-          <label htmlFor="format" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="format" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Output format
           </label>
           <select
             id="format"
             value={selectedFormat}
             onChange={(e) => setSelectedFormat(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+            className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           >
             {FORMAT_OPTIONS.map(option => (
               <option key={option.value} value={option.value}>
@@ -108,22 +108,22 @@ export default function TimestampConverter() {
           <button
             onClick={handleClear}
             data-action="clear"
-            className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-medium"
+            className="px-6 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition font-medium"
           >
             Clear
           </button>
         </div>
 
         {error && (
-          <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-            <p className="text-red-800 text-sm font-medium">Error</p>
-            <p className="text-red-700 text-sm mt-1">{error}</p>
+          <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+            <p className="text-red-800 dark:text-red-400 text-sm font-medium">Error</p>
+            <p className="text-red-700 dark:text-red-400 text-sm mt-1">{error}</p>
           </div>
         )}
 
         {output && (
           <div>
-            <label htmlFor="output" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="output" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Converted
             </label>
             <div className="relative">
@@ -132,7 +132,7 @@ export default function TimestampConverter() {
                 type="text"
                 value={output}
                 readOnly
-                className="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 font-mono text-sm"
+                className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50 font-mono text-sm text-gray-900 dark:text-gray-100"
               />
               <CopyButton text={output} />
             </div>

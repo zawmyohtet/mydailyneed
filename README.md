@@ -25,7 +25,8 @@
 | | Multiline to List | Convert multiline text to a comma-separated list |
 | | Diff Viewer | Compare two texts side by side and highlight differences |
 | **Image** | Image to Text (OCR) | Extract text from images using Tesseract.js |
-| **Misc** | Timestamp Converter | Convert between Unix timestamps and human-readable dates |
+| **Misc** | Notes & Todos | Quick notes and todo lists saved locally in your browser |
+| | Timestamp Converter | Convert between Unix timestamps and human-readable dates |
 | | UUID Generator | Generate random UUID v4 identifiers |
 | | Color Converter | Convert colors between HEX, RGB and HSL formats |
 | | Regex Tester | Test and validate regular expressions with live matching |

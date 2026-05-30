@@ -30,7 +30,7 @@ export default function DiffViewer() {
       <div className="space-y-4">
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label htmlFor="leftInput" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="leftInput" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Original
             </label>
             <textarea
@@ -38,11 +38,11 @@ export default function DiffViewer() {
               value={leftInput}
               onChange={(e) => setLeftInput(e.target.value)}
               placeholder="Paste original text here..."
-              className="w-full h-48 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm resize-none font-mono"
+              className="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm resize-none font-mono bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 dark:placeholder-gray-500"
             />
           </div>
           <div>
-            <label htmlFor="rightInput" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="rightInput" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Modified
             </label>
             <textarea
@@ -50,19 +50,19 @@ export default function DiffViewer() {
               value={rightInput}
               onChange={(e) => setRightInput(e.target.value)}
               placeholder="Paste modified text here..."
-              className="w-full h-48 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm resize-none font-mono"
+              className="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm resize-none font-mono bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 dark:placeholder-gray-500"
             />
           </div>
         </div>
 
         <div className="flex gap-4 items-center">
-          <div className="flex rounded-lg border border-gray-300 overflow-hidden">
+          <div className="flex rounded-lg border border-gray-300 dark:border-gray-600 overflow-hidden">
             <button
               onClick={() => setMode('line')}
               className={`px-4 py-2 text-sm font-medium transition ${
                 mode === 'line'
                   ? 'bg-blue-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-50'
+                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
               }`}
             >
               Line
@@ -72,7 +72,7 @@ export default function DiffViewer() {
               className={`px-4 py-2 text-sm font-medium transition ${
                 mode === 'word'
                   ? 'bg-blue-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-50'
+                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
               }`}
             >
               Word
@@ -88,7 +88,7 @@ export default function DiffViewer() {
           <button
             onClick={handleClear}
             data-action="clear"
-            className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-medium"
+            className="px-6 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition font-medium"
           >
             Clear
           </button>
@@ -96,13 +96,13 @@ export default function DiffViewer() {
 
         {diffResult && (
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Differences
             </label>
-            <div className="border border-gray-300 rounded-lg overflow-hidden">
-              <div className="grid grid-cols-2 divide-x divide-gray-300">
-                <div className="bg-red-50/50">
-                  <div className="px-3 py-1.5 bg-gray-100 border-b border-gray-300 text-xs font-medium text-gray-600">
+            <div className="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
+              <div className="grid grid-cols-2 divide-x divide-gray-300 dark:divide-gray-600">
+                <div className="bg-red-50/50 dark:bg-red-900/10">
+                  <div className="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 border-b border-gray-300 dark:border-gray-600 text-xs font-medium text-gray-600 dark:text-gray-400">
                     Original
                   </div>
                   <div className="max-h-96 overflow-auto font-mono text-sm">
@@ -111,9 +111,9 @@ export default function DiffViewer() {
                         key={i}
                         className={`px-3 whitespace-pre-wrap break-all min-h-[1.5rem] leading-6 ${
                           chunk.type === 'removed'
-                            ? 'bg-red-100 text-red-800'
+                            ? 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300'
                             : chunk.type === 'empty'
-                            ? 'bg-gray-100'
+                            ? 'bg-gray-100 dark:bg-gray-800'
                             : ''
                         }`}
                       >
@@ -122,8 +122,8 @@ export default function DiffViewer() {
                     ))}
                   </div>
                 </div>
-                <div className="bg-green-50/50">
-                  <div className="px-3 py-1.5 bg-gray-100 border-b border-gray-300 text-xs font-medium text-gray-600">
+                <div className="bg-green-50/50 dark:bg-green-900/10">
+                  <div className="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 border-b border-gray-300 dark:border-gray-600 text-xs font-medium text-gray-600 dark:text-gray-400">
                     Modified
                   </div>
                   <div className="max-h-96 overflow-auto font-mono text-sm">
@@ -132,9 +132,9 @@ export default function DiffViewer() {
                         key={i}
                         className={`px-3 whitespace-pre-wrap break-all min-h-[1.5rem] leading-6 ${
                           chunk.type === 'added'
-                            ? 'bg-green-100 text-green-800'
+                            ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300'
                             : chunk.type === 'empty'
-                            ? 'bg-gray-100'
+                            ? 'bg-gray-100 dark:bg-gray-800'
                             : ''
                         }`}
                       >

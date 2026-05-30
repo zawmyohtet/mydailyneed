@@ -81,12 +81,12 @@ export default function ImageToText() {
       <div className="space-y-4">
         <div className="flex flex-wrap items-center gap-4">
           <div className="flex items-center gap-2">
-            <label htmlFor="ocr-language" className="text-sm font-medium">Language:</label>
+            <label htmlFor="ocr-language" className="text-sm font-medium text-gray-700 dark:text-gray-300">Language:</label>
             <select
               id="ocr-language"
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
-              className="px-3 py-2 border rounded-lg dark:bg-gray-800 dark:border-gray-600"
+              className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             >
               {OCR_LANGUAGES.map(lang => (
                 <option key={lang.code} value={lang.code}>
@@ -106,14 +106,14 @@ export default function ImageToText() {
 
         {preview && (
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Image Preview
             </label>
             <div className="relative">
               <img 
                 src={preview} 
                 alt="Preview" 
-                className="max-h-64 rounded-lg border border-gray-300"
+                className="max-h-64 rounded-lg border border-gray-300 dark:border-gray-600"
               />
               <button
                 onClick={() => { setFile(null); setPreview(null); }}
@@ -137,36 +137,36 @@ export default function ImageToText() {
           <button
             onClick={handleClear}
             data-action="clear"
-            className="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-medium"
+            className="px-6 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition font-medium"
           >
             Clear
           </button>
         </div>
 
         {isProcessing && (
-          <div className="w-full bg-gray-200 rounded-full h-2">
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
             <div 
-              className="bg-blue-600 h-2 rounded-full transition-all"
+              className="bg-blue-600 dark:bg-blue-500 h-2 rounded-full transition-all"
               style={{ width: `${progress}%` }}
             />
           </div>
         )}
 
         {error && (
-          <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-            <p className="text-red-800 text-sm font-medium">Error</p>
-            <p className="text-red-700 text-sm mt-1">{error}</p>
+          <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+            <p className="text-red-800 dark:text-red-400 text-sm font-medium">Error</p>
+            <p className="text-red-700 dark:text-red-400 text-sm mt-1">{error}</p>
           </div>
         )}
 
         {output && (
           <div>
             <div className="flex justify-between items-center mb-1">
-              <label htmlFor="output" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="output" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                 Extracted Text
               </label>
               {confidence !== null && (
-                <span className="text-sm text-gray-600">
+                <span className="text-sm text-gray-600 dark:text-gray-400">
                   Confidence: {confidence.toFixed(1)}%
                 </span>
               )}
@@ -177,7 +177,7 @@ export default function ImageToText() {
                 value={output}
                 readOnly
                 placeholder="Extracted text will appear here..."
-                className="w-full h-48 p-3 border border-gray-300 rounded-lg bg-gray-50 font-mono text-sm resize-none"
+                className="w-full h-48 p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50 font-mono text-sm resize-none text-gray-900 dark:text-gray-100 dark:placeholder-gray-500"
               />
               <CopyButton text={output} />
             </div>

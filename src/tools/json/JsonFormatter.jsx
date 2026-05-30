@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { formatJson } from '../../utils/formatJson'
 import CopyButton from '../../components/CopyButton'
 import SEO from '../../components/SEO'
@@ -65,14 +66,18 @@ export default function JsonFormatter() {
         path="/tools/json-formatter"
         keywords={['json', 'format', 'prettify', 'beautify', 'validate']}
       />
+      <div className="flex items-center gap-3">
+        <FontAwesomeIcon icon={['fas', 'code']} className="text-2xl text-primary-600 dark:text-primary-400" />
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">JSON Formatter</h1>
+      </div>
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
-          <label htmlFor="indent" className="text-sm font-medium">Indent:</label>
+          <label htmlFor="indent" className="text-sm font-medium text-gray-700 dark:text-gray-300">Indent:</label>
           <select
             id="indent"
             value={indent}
             onChange={(e) => setIndent(e.target.value === 'tab' ? '\t' : Number(e.target.value))}
-            className="px-3 py-2 border rounded-lg dark:bg-gray-800 dark:border-gray-600"
+            className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
           >
             {INDENT_OPTIONS.map(opt => (
               <option key={opt.label} value={opt.value}>
@@ -82,7 +87,7 @@ export default function JsonFormatter() {
           </select>
         </div>
 
-        <label className="flex items-center gap-2 text-sm">
+        <label className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
           <input
             type="checkbox"
             checked={autoFormat}
@@ -118,26 +123,26 @@ export default function JsonFormatter() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="input" className="block text-sm font-medium mb-2">Input</label>
+          <label htmlFor="input" className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Input</label>
           <textarea
             id="input"
             value={input}
             onChange={handleInputChange}
             placeholder='Paste your JSON here, e.g., {"name": "value"}'
-            className="w-full h-96 p-4 border rounded-lg font-mono text-sm dark:bg-gray-800 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg font-mono text-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
 
         <div>
           <div className="flex items-center justify-between mb-2">
-            <label className="block text-sm font-medium">Output</label>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Output</label>
             {output && <CopyButton text={output} label="Copy formatted JSON" />}
           </div>
           <textarea
             readOnly
             value={output}
             placeholder="Formatted JSON will appear here"
-            className="w-full h-96 p-4 border rounded-lg font-mono text-sm bg-gray-50 dark:bg-gray-800/50 dark:border-gray-600"
+            className="w-full h-96 p-4 border border-gray-300 dark:border-gray-600 rounded-lg font-mono text-sm bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 dark:placeholder-gray-500"
           />
         </div>
       </div>
