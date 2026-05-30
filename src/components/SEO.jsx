@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 
 const SITE_NAME = 'MyDailyNeed'
-const SITE_URL = 'https://mydailyneed.com'
+const SITE_URL = 'https://mydailyneed.vercel.app'
 const DEFAULT_DESCRIPTION = 'Free developer utility tools that run entirely in your browser. JSON formatter, XML tools, text utilities, and more.'
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`
 

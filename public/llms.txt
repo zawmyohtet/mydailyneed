@@ -6,38 +6,38 @@ All tools are free, require no signup, and work offline. Data never leaves your 
 
 ## JSON Tools
 
-- [JSON Formatter](https://mydailyneed.com/tools/json-formatter): Prettify and validate JSON with syntax highlighting and configurable indentation
-- [JSON Minifier](https://mydailyneed.com/tools/json-minifier): Remove whitespace from JSON for compact output with size savings stats
-- [JSON ↔ YAML Converter](https://mydailyneed.com/tools/json-yaml): Convert between JSON and YAML formats in both directions
-- [JSON Attribute Extractor](https://mydailyneed.com/tools/json-attribute-extractor): Extract specific attributes from JSON using JSONPath expressions
+- [JSON Formatter](https://mydailyneed.vercel.app/tools/json-formatter): Prettify and validate JSON with syntax highlighting and configurable indentation
+- [JSON Minifier](https://mydailyneed.vercel.app/tools/json-minifier): Remove whitespace from JSON for compact output with size savings stats
+- [JSON ↔ YAML Converter](https://mydailyneed.vercel.app/tools/json-yaml): Convert between JSON and YAML formats in both directions
+- [JSON Attribute Extractor](https://mydailyneed.vercel.app/tools/json-attribute-extractor): Extract specific attributes from JSON using JSONPath expressions
 
 ## XML Tools
 
-- [XML Formatter](https://mydailyneed.com/tools/xml-formatter): Prettify and validate XML with proper indentation
-- [XML Minifier](https://mydailyneed.com/tools/xml-minifier): Strip whitespace from XML for compact output with optional comment preservation
+- [XML Formatter](https://mydailyneed.vercel.app/tools/xml-formatter): Prettify and validate XML with proper indentation
+- [XML Minifier](https://mydailyneed.vercel.app/tools/xml-minifier): Strip whitespace from XML for compact output with optional comment preservation
 
 ## Text Tools
 
-- [Base64 Encoder/Decoder](https://mydailyneed.com/tools/base64-encoder-decoder): Encode text to Base64 or decode Base64 back to text
-- [URL Encoder/Decoder](https://mydailyneed.com/tools/url-encoder-decoder): Encode URLs for safe transmission or decode encoded URLs
-- [Word Counter](https://mydailyneed.com/tools/word-counter): Count words, characters, sentences, paragraphs, lines, and reading time
-- [Case Converter](https://mydailyneed.com/tools/case-converter): Convert text between uppercase, lowercase, camelCase, snake_case, and more
-- [Duplicate Finder](https://mydailyneed.com/tools/duplicate-finder): Find duplicate items in a comma or newline separated list
-- [Multiline to List](https://mydailyneed.com/tools/multiline-to-list): Convert multiline text to a comma-separated list
-- [Diff Viewer](https://mydailyneed.com/tools/diff-viewer): Compare two texts side by side and highlight differences
+- [Base64 Encoder/Decoder](https://mydailyneed.vercel.app/tools/base64-encoder-decoder): Encode text to Base64 or decode Base64 back to text
+- [URL Encoder/Decoder](https://mydailyneed.vercel.app/tools/url-encoder-decoder): Encode URLs for safe transmission or decode encoded URLs
+- [Word Counter](https://mydailyneed.vercel.app/tools/word-counter): Count words, characters, sentences, paragraphs, lines, and reading time
+- [Case Converter](https://mydailyneed.vercel.app/tools/case-converter): Convert text between uppercase, lowercase, camelCase, snake_case, and more
+- [Duplicate Finder](https://mydailyneed.vercel.app/tools/duplicate-finder): Find duplicate items in a comma or newline separated list
+- [Multiline to List](https://mydailyneed.vercel.app/tools/multiline-to-list): Convert multiline text to a comma-separated list
+- [Diff Viewer](https://mydailyneed.vercel.app/tools/diff-viewer): Compare two texts side by side and highlight differences
 
 ## Image Tools
 
-- [Image to Text (OCR)](https://mydailyneed.com/tools/image-to-text): Extract text from images using OCR technology powered by Tesseract.js — runs entirely in the browser
+- [Image to Text (OCR)](https://mydailyneed.vercel.app/tools/image-to-text): Extract text from images using OCR technology powered by Tesseract.js — runs entirely in the browser
 
 ## Misc Tools
 
-- [Timestamp Converter](https://mydailyneed.com/tools/timestamp-converter): Convert between Unix timestamps and human-readable dates
-- [UUID Generator](https://mydailyneed.com/tools/uuid-generator): Generate random UUID v4 identifiers with uppercase/no-dash options
-- [Color Converter](https://mydailyneed.com/tools/color-converter): Convert colors between HEX, RGB, and HSL formats with visual preview
-- [Regex Tester](https://mydailyneed.com/tools/regex-tester): Test and validate regular expressions with live matching and match details
-- [JWT Decoder](https://mydailyneed.com/tools/jwt-decoder): Decode JSON Web Tokens to view header and payload without sending them anywhere
+- [Timestamp Converter](https://mydailyneed.vercel.app/tools/timestamp-converter): Convert between Unix timestamps and human-readable dates
+- [UUID Generator](https://mydailyneed.vercel.app/tools/uuid-generator): Generate random UUID v4 identifiers with uppercase/no-dash options
+- [Color Converter](https://mydailyneed.vercel.app/tools/color-converter): Convert colors between HEX, RGB, and HSL formats with visual preview
+- [Regex Tester](https://mydailyneed.vercel.app/tools/regex-tester): Test and validate regular expressions with live matching and match details
+- [JWT Decoder](https://mydailyneed.vercel.app/tools/jwt-decoder): Decode JSON Web Tokens to view header and payload without sending them anywhere
 
 ## Optional
 
-- [GitHub Repository](https://github.com/mydailyneed/mydailyneed): Source code and contribution guidelines
+- [GitHub Repository](https://github.com/zawmyohtet/mydailyneed): Source code and contribution guidelines

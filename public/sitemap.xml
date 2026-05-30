@@ -1,121 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mydailyneed.com/</loc>
+    <loc>https://mydailyneed.vercel.app/</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/json-formatter</loc>
+    <loc>https://mydailyneed.vercel.app/tools/json-formatter</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/json-minifier</loc>
+    <loc>https://mydailyneed.vercel.app/tools/json-minifier</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/json-yaml</loc>
+    <loc>https://mydailyneed.vercel.app/tools/json-yaml</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/json-attribute-extractor</loc>
+    <loc>https://mydailyneed.vercel.app/tools/json-attribute-extractor</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/xml-formatter</loc>
+    <loc>https://mydailyneed.vercel.app/tools/xml-formatter</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/xml-minifier</loc>
+    <loc>https://mydailyneed.vercel.app/tools/xml-minifier</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/base64-encoder-decoder</loc>
+    <loc>https://mydailyneed.vercel.app/tools/base64-encoder-decoder</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/url-encoder-decoder</loc>
+    <loc>https://mydailyneed.vercel.app/tools/url-encoder-decoder</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/word-counter</loc>
+    <loc>https://mydailyneed.vercel.app/tools/word-counter</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/case-converter</loc>
+    <loc>https://mydailyneed.vercel.app/tools/case-converter</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/duplicate-finder</loc>
+    <loc>https://mydailyneed.vercel.app/tools/duplicate-finder</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/multiline-to-list</loc>
+    <loc>https://mydailyneed.vercel.app/tools/multiline-to-list</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/diff-viewer</loc>
+    <loc>https://mydailyneed.vercel.app/tools/diff-viewer</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/image-to-text</loc>
+    <loc>https://mydailyneed.vercel.app/tools/image-to-text</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/timestamp-converter</loc>
+    <loc>https://mydailyneed.vercel.app/tools/timestamp-converter</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/uuid-generator</loc>
+    <loc>https://mydailyneed.vercel.app/tools/uuid-generator</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/color-converter</loc>
+    <loc>https://mydailyneed.vercel.app/tools/color-converter</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/regex-tester</loc>
+    <loc>https://mydailyneed.vercel.app/tools/regex-tester</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mydailyneed.com/tools/jwt-decoder</loc>
+    <loc>https://mydailyneed.vercel.app/tools/jwt-decoder</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

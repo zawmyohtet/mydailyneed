@@ -13,10 +13,10 @@
     "uuid-generator",
     "online-tools"
   ],
-  "homepage": "https://mydailyneed.com",
+  "homepage": "https://mydailyneed.vercel.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mydailyneed/mydailyneed"
+    "url": "https://github.com/zawmyohtet/mydailyneed"
   },
   "scripts": {
     "dev": "vite",

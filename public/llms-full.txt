@@ -7,24 +7,24 @@ All tools are free, require no signup, and work offline. Data never leaves your 
 ## JSON Tools
 
 ### JSON Formatter
-- [JSON Formatter](https://mydailyneed.com/tools/json-formatter): Prettify and validate JSON with syntax highlighting and configurable indentation
+- [JSON Formatter](https://mydailyneed.vercel.app/tools/json-formatter): Prettify and validate JSON with syntax highlighting and configurable indentation
 - Supports 2-space, 4-space, and tab indentation
 - Auto-format on paste option
 - Real-time validation with error highlighting
 - Copy formatted output to clipboard
 
 ### JSON Minifier
-- [JSON Minifier](https://mydailyneed.com/tools/json-minifier): Remove whitespace from JSON for compact output with size savings stats
+- [JSON Minifier](https://mydailyneed.vercel.app/tools/json-minifier): Remove whitespace from JSON for compact output with size savings stats
 - Shows original size, minified size, and percentage saved
 - Preserves data integrity while removing all unnecessary whitespace
 
 ### JSON ↔ YAML Converter
-- [JSON ↔ YAML Converter](https://mydailyneed.com/tools/json-yaml): Convert between JSON and YAML formats in both directions
+- [JSON ↔ YAML Converter](https://mydailyneed.vercel.app/tools/json-yaml): Convert between JSON and YAML formats in both directions
 - Bidirectional conversion with one-click switch
 - Preserves nested structures and arrays
 
 ### JSON Attribute Extractor
-- [JSON Attribute Extractor](https://mydailyneed.com/tools/json-attribute-extractor): Extract specific attributes from JSON using JSONPath expressions
+- [JSON Attribute Extractor](https://mydailyneed.vercel.app/tools/json-attribute-extractor): Extract specific attributes from JSON using JSONPath expressions
 - Uses JSONPath syntax for powerful querying
 - Supports nested objects, arrays, and wildcards
 - Real-time results as you type
@@ -32,13 +32,13 @@ All tools are free, require no signup, and work offline. Data never leaves your 
 ## XML Tools
 
 ### XML Formatter
-- [XML Formatter](https://mydailyneed.com/tools/xml-formatter): Prettify and validate XML with proper indentation
+- [XML Formatter](https://mydailyneed.vercel.app/tools/xml-formatter): Prettify and validate XML with proper indentation
 - Configurable 2-space or 4-space indentation
 - Handles DOCTYPE declarations
 - Error detection for malformed XML
 
 ### XML Minifier
-- [XML Minifier](https://mydailyneed.com/tools/xml-minifier): Strip whitespace from XML for compact output with optional comment preservation
+- [XML Minifier](https://mydailyneed.vercel.app/tools/xml-minifier): Strip whitespace from XML for compact output with optional comment preservation
 - Option to preserve or remove comments
 - Shows size savings statistics
 - Handles complex nested XML structures
@@ -46,43 +46,43 @@ All tools are free, require no signup, and work offline. Data never leaves your 
 ## Text Tools
 
 ### Base64 Encoder/Decoder
-- [Base64 Encoder/Decoder](https://mydailyneed.com/tools/base64-encoder-decoder): Encode text to Base64 or decode Base64 back to text
+- [Base64 Encoder/Decoder](https://mydailyneed.vercel.app/tools/base64-encoder-decoder): Encode text to Base64 or decode Base64 back to text
 - Instant encoding and decoding
 - Handles Unicode and special characters
 - Copy results with one click
 
 ### URL Encoder/Decoder
-- [URL Encoder/Decoder](https://mydailyneed.com/tools/url-encoder-decoder): Encode URLs for safe transmission or decode encoded URLs
+- [URL Encoder/Decoder](https://mydailyneed.vercel.app/tools/url-encoder-decoder): Encode URLs for safe transmission or decode encoded URLs
 - Encodes special characters for safe URL transmission
 - Decodes percent-encoded strings back to readable text
 - Supports full URLs and individual components
 
 ### Word Counter
-- [Word Counter](https://mydailyneed.com/tools/word-counter): Count words, characters, sentences, paragraphs, lines, and reading time
+- [Word Counter](https://mydailyneed.vercel.app/tools/word-counter): Count words, characters, sentences, paragraphs, lines, and reading time
 - Counts words, characters (with and without spaces), sentences, paragraphs, and lines
 - Calculates estimated reading time
 - Real-time statistics as you type
 
 ### Case Converter
-- [Case Converter](https://mydailyneed.com/tools/case-converter): Convert text between uppercase, lowercase, camelCase, snake_case, and more
+- [Case Converter](https://mydailyneed.vercel.app/tools/case-converter): Convert text between uppercase, lowercase, camelCase, snake_case, and more
 - Supports: UPPERCASE, lowercase, Title Case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE
 - One-click conversion between all formats
 - Preview results in real-time
 
 ### Duplicate Finder
-- [Duplicate Finder](https://mydailyneed.com/tools/duplicate-finder): Find duplicate items in a comma or newline separated list
+- [Duplicate Finder](https://mydailyneed.vercel.app/tools/duplicate-finder): Find duplicate items in a comma or newline separated list
 - Supports comma-separated, newline-separated, or custom delimiter lists
 - Shows count of each duplicate
 - Option to show only duplicates or only unique items
 
 ### Multiline to List
-- [Multiline to List](https://mydailyneed.com/tools/multiline-to-list): Convert multiline text to a comma-separated list
+- [Multiline to List](https://mydailyneed.vercel.app/tools/multiline-to-list): Convert multiline text to a comma-separated list
 - Converts line-by-line text to various list formats
 - Options: comma-separated, bullet list, numbered list
 - Trim whitespace option
 
 ### Diff Viewer
-- [Diff Viewer](https://mydailyneed.com/tools/diff-viewer): Compare two texts side by side and highlight differences
+- [Diff Viewer](https://mydailyneed.vercel.app/tools/diff-viewer): Compare two texts side by side and highlight differences
 - Side-by-side comparison with highlighted changes
 - Shows added, removed, and unchanged lines
 - Useful for comparing code, configs, or any text
@@ -90,7 +90,7 @@ All tools are free, require no signup, and work offline. Data never leaves your 
 ## Image Tools
 
 ### Image to Text (OCR)
-- [Image to Text (OCR)](https://mydailyneed.com/tools/image-to-text): Extract text from images using OCR technology powered by Tesseract.js — runs entirely in the browser
+- [Image to Text (OCR)](https://mydailyneed.vercel.app/tools/image-to-text): Extract text from images using OCR technology powered by Tesseract.js — runs entirely in the browser
 - Supports JPEG, PNG, GIF, and WebP formats
 - Shows confidence score for extracted text
 - Max file size: 5MB
@@ -99,33 +99,33 @@ All tools are free, require no signup, and work offline. Data never leaves your 
 ## Misc Tools
 
 ### Timestamp Converter
-- [Timestamp Converter](https://mydailyneed.com/tools/timestamp-converter): Convert between Unix timestamps and human-readable dates
+- [Timestamp Converter](https://mydailyneed.vercel.app/tools/timestamp-converter): Convert between Unix timestamps and human-readable dates
 - Supports seconds and milliseconds timestamps
 - Converts to multiple date formats
 - Live clock showing current timestamp
 
 ### UUID Generator
-- [UUID Generator](https://mydailyneed.com/tools/uuid-generator): Generate random UUID v4 identifiers with uppercase/no-dash options
+- [UUID Generator](https://mydailyneed.vercel.app/tools/uuid-generator): Generate random UUID v4 identifiers with uppercase/no-dash options
 - Generates RFC 4122 compliant UUID v4
 - Options: uppercase, no dashes
 - Generate single UUID or batch of up to 100
 
 ### Color Converter
-- [Color Converter](https://mydailyneed.com/tools/color-converter): Convert colors between HEX, RGB, and HSL formats with visual preview
+- [Color Converter](https://mydailyneed.vercel.app/tools/color-converter): Convert colors between HEX, RGB, and HSL formats with visual preview
 - Converts between HEX, RGB, and HSL
 - Visual color preview
 - Named color lookup (e.g., "red", "navy")
 - Click-to-copy color values
 
 ### Regex Tester
-- [Regex Tester](https://mydailyneed.com/tools/regex-tester): Test and validate regular expressions with live matching and match details
+- [Regex Tester](https://mydailyneed.vercel.app/tools/regex-tester): Test and validate regular expressions with live matching and match details
 - Live pattern matching as you type
 - Shows all matches with capture groups
 - Supports global and case-insensitive flags
 - Match details including indices
 
 ### JWT Decoder
-- [JWT Decoder](https://mydailyneed.com/tools/jwt-decoder): Decode JSON Web Tokens to view header and payload without sending them anywhere
+- [JWT Decoder](https://mydailyneed.vercel.app/tools/jwt-decoder): Decode JSON Web Tokens to view header and payload without sending them anywhere
 - Decodes header and payload sections
 - Pretty-printed JSON output
 - Shows token expiration status
@@ -133,4 +133,4 @@ All tools are free, require no signup, and work offline. Data never leaves your 
 
 ## Optional
 
-- [GitHub Repository](https://github.com/mydailyneed/mydailyneed): Source code and contribution guidelines
+- [GitHub Repository](https://github.com/zawmyohtet/mydailyneed): Source code and contribution guidelines
