@@ -98,6 +98,13 @@ All tools are free, require no signup, and work offline. Data never leaves your 
 
 ## Misc Tools
 
+### Notes & Todos
+- [Notes & Todos](https://mydailyneed.vercel.app/tools/notes-and-todos): Quick notes and todo lists saved locally in your browser
+- Create and manage quick notes with titles and content
+- Add, complete, and delete todo items
+- Maximum 20 notes and 20 todos
+- Data persisted in localStorage — never leaves your browser
+
 ### Timestamp Converter
 - [Timestamp Converter](https://mydailyneed.vercel.app/tools/timestamp-converter): Convert between Unix timestamps and human-readable dates
 - Supports seconds and milliseconds timestamps

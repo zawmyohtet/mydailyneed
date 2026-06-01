@@ -32,6 +32,7 @@ All tools are free, require no signup, and work offline. Data never leaves your 
 
 ## Misc Tools
 
+- [Notes & Todos](https://mydailyneed.vercel.app/tools/notes-and-todos): Quick notes and todo lists saved locally in your browser
 - [Timestamp Converter](https://mydailyneed.vercel.app/tools/timestamp-converter): Convert between Unix timestamps and human-readable dates
 - [UUID Generator](https://mydailyneed.vercel.app/tools/uuid-generator): Generate random UUID v4 identifiers with uppercase/no-dash options
 - [Color Converter](https://mydailyneed.vercel.app/tools/color-converter): Convert colors between HEX, RGB, and HSL formats with visual preview
